@@ -9,5 +9,5 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 Article.destroy_all
 20.times do
-Article.create(title: Faker::Name.name, content: Faker::TvShows::SouthPark.quote).save!
+Article.create(title: Faker::TvShows::SouthPark.quote, content: Faker::TvShows::Simpsons.quote + Faker::TvShows::Simpsons.quote * 3 + Faker::TvShows::Simpsons.quote * 2 + Faker::TvShows::Simpsons.quote * 3).save!
 end

@@ -1,7 +1,9 @@
 <h2><%= @article.title %></h2>
 <p><%= @article.content %></p>
-<%= link_to "Delete", article_path(@article),
+
+<button class="btn btn-outline-danger" type="button"><%= link_to "Delete", article_path(@article),
       method: :delete,
-      data: { confirm: "Are you sure?" } %>
-<%= link_to "back to list", articles_path %>
-<%= link_to "edit article", edit_article_path(@article) %>
+      data: { confirm: "Are you sure?" } %></button>
+<button class="btn btn-outline-info" type="button"><%= link_to "back to list", articles_path %></button>
+<button class="btn btn-outline-success" type="button">
+<%= link_to "edit article", edit_article_path(@article) %></button>
